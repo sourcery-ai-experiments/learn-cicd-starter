@@ -20,3 +20,6 @@ jobs:
 
       - name: Go Unit Tests
         run: go test ./...
+    
+      - name: Go Test Coverage
+        run: go test -cover ./...
