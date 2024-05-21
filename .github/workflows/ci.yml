@@ -16,7 +16,7 @@ jobs:
       - name: Set up Go
         uses: actions/setup-go@v4
         with:
-          go-version: '1.20'
+          go-version: '1.22'
 
       - name: Go Unit Tests
         run: go test ./...
@@ -35,7 +35,7 @@ jobs:
         - name: Set up Go
           uses: actions/setup-go@v4
           with:
-            go-version: '1.20'
+            go-version: '1.22'
   
         - name: Install staticcheck
           run: go install honnef.co/go/tools/cmd/staticcheck@latest
@@ -43,7 +43,6 @@ jobs:
         - name: Install gosec
           run: go install github.com/securego/gosec/v2/cmd/gosec@latest
 
-            
         - name: Go Formatting
           run: test -z $(go fmt ./...)
 
